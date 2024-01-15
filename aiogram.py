@@ -7,8 +7,10 @@ from aiogram.filters.command import Command
 
 # Включаем логирование, чтобы не пропустить важные сообщения
 logging.basicConfig(level=logging.INFO)
-# Объект бота
+
+# Объект бота. Вставьте сюда свой токен
 bot = Bot(token="12345678:AaBbCcDdEeFfGgHh")
+
 # Диспетчер
 dp = Dispatcher()
 
@@ -22,7 +24,6 @@ async def cmd_start(message: types.Message):
 # Запуск процесса поллинга новых апдейтов
 async def main():
     await dp.start_polling(bot)
-
 
 if __name__ == "__main__":
     asyncio.run(main())
